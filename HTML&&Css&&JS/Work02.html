@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <!-- 引入外部CSS样式表：rel指定关系为样式表，href指向CSS文件夹下的login.css文件，type声明文件类型为CSS -->
+    <link rel="stylesheet" href="/Users/Tride/Documents/HTML learning/week02/login.css" type="text/css">
+</head>
+
+<body>
+    <!-- 主容器 div，通常用于居中或限制页面整体宽度 -->
+    <div id="main">
+
+        <!-- 顶部图片区域 -->
+        <div>
+            <br>
+            <p><img src="../images/Login.png" alt=""></p>
+            <br>
+        </div>
+
+        <!-- 登录表单内容区域 -->
+        <div id="content">
+            <!-- 
+          form 标签定义表单:
+          action="#": 提交到当前页面 (实际开发中应改为后端处理地址)
+          method="post": 使用 POST 方法提交数据 (比 GET 更安全，适合传密码)
+        -->
+            <form action="#" method="post">
+                <fieldset>
+                    <!-- 用户名输入部分 -->
+                    <!-- label 的 for 属性与 input 的 id 对应，点击文字也能聚焦输入框 -->
+                    <label for="user">Username</label>
+                    <!-- class="login":类名，用于 CSS 样式分组,允许在 CSS 文件中通过 .login 选择器统一设置样式（如边框颜色、内边距、字体等） -->
+                    <input id="user" type="text" size="20" class="login"><br>
+
+                    <!-- 密码输入部分 -->
+                    <label for="pass">Password</label>
+                    <!-- autocomplete="off": 禁止浏览器自动提示填充 -->
+                    <input id="pass" type="password" size="20" autocomplete="off" class="login"><br>
+                    <br>
+
+                    <!-- 提交按钮 -->
+                    <!-- type="submit": 点击后触发表单提交 -->
+                    <p><input type="submit" value="login" name="login" class="button"></p>
+                </fieldset>
+            
+            </form>
+            <br><br><br>
+        </div>
+
+        <!-- 底部版权或链接区域 -->
+        <div id="footer">
+            <p><a href="https://github.com/Tridez/Learning-web-and-css"></a></p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>我的个人信息文件</h2>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="gender"></p>
+    <p id="isNewbie"></p>
+    <p id="currentLearn"></p>
+
+
+    <script>
+        var name = "Matt";
+        var age = "20";
+        var gender = "Male";
+        var isNewie = "是";
+        var currentLearn = "JavaScript";
+        // 定义变量
+
+        alert("姓名: " + name + ", 年龄: " + age);
+
+        console.log("== 详细个人信息(含类型)===")
+        console.log("姓名:" + name + ", 类型: " + typeof name);
+        console.log("年龄:" + age + ", 类型: " + typeof age);
+        console.log("性别:" + gender + ", 类型: " + typeof gender);
+        console.log("是否新手:" + isNewie + ", 类型: " + typeof isNewie);
+        console.log("学习技术:" + currentLearn + ", 类型: " + typeof currentLearn);
+
+        age = age + "岁";
+        console.log("===年龄变量修改后===")
+        console.log("年龄:" + age + ", 类型: " + typeof age);
+
+        document.getElementById("name").innerText = "姓名: " + name;
+        document.getElementById("age").innerText = "年龄: " + age;
+        document.getElementById("gender").innerText = "性别: " + gender;
+        document.getElementById("isNewbie").innerText = "是否新手: " + isNewie;
+        document.getElementById("currentLearn").innerText = "当前学习: " + currentLearn;
+
+    </script>
+    
+</body>
+</html>

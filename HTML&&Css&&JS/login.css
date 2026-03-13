@@ -1,0 +1,84 @@
+/* 重置所有元素的默认边距和内边距为0 */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 设置全局body样式 */
+body {
+    background-color: #fefefe; /* 背景颜色 */
+    font-size: 12px/15px Arial; /* 字体大小/行高 字体族 */
+    line-height: 20px; /* 行高 */
+    color: #6b6b6b; /* 文本颜色 */
+}
+
+/* 主内容区域样式 */
+#main {
+    text-align: center; /* 文字水平居中 */
+    margin: 0 auto; /* 上下边距为0，左右自动（实现水平居中） */
+}
+
+/* 内容区块样式 */
+#content {
+    display: inline-block; /* 行内块级元素，便于水平居中 */
+    padding: 20px; /* 内边距 */
+    width: auto; /* 宽度自动，由内容决定 */
+}
+
+/* 表单标签样式 */
+label {
+    float: left; /* 向左浮动 */
+    text-align: right; /* 文字右对齐 */
+    margin-right: 0.5em; /* 右边距 */
+    display: block; /* 块级元素 */
+    overflow: hidden; /* 超出部分隐藏，常用于清除浮动影响 */
+    padding-right: 50px; /* 右侧内边距 */
+    font-weight: bold; /* 字体加粗 */
+}
+
+/* 输入框通用样式 */
+.login {
+    float: left; /* 向左浮动 */
+    color:blue; /* 文本颜色 */
+    width: 320px; /* 宽度 */
+    background-color:brown; /* 背景色 */
+    border: 1px; /* 边框宽度（不完整，通常需要配合border-style和border-color） */
+    border-color: #c4c4c4; /* 边框颜色 */
+    border-style: solid; /* 边框样式为实线 */
+    padding: 6px; /* 内边距 */
+    margin-bottom: 12px; /* 下边距 */
+}
+
+/* 字段集（表单分组）样式 */
+fieldset {
+    width: 350px; /* 宽度 */
+    padding: 10px 20px; /* 上下内边距10px，左右20px */
+    overflow: hidden; /* 溢出内容隐藏 */
+
+}
+
+/* 页脚样式 */
+#footer {
+    position: absolute; /* 绝对定位 */
+    width: 100%; /* 宽度100% */
+    height: 50px; /* 高度 */
+    bottom: 0px; /* 定位到底部 */
+    left: 0px; /* 定位到左侧 */
+}
+
+/* 按钮背景 */
+.button{
+    background-color: dodgerblue;
+}
+
+/* 图片美化 */
+img {
+    width: 200px;         
+    border-radius: 15px;  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    transition: 0.3s;    
+}
+
+img:hover {
+    transform: scale(1.1); 
+}

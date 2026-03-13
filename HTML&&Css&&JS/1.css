@@ -1,0 +1,24 @@
+h1,em{
+    color: aqua;
+}
+
+.link{
+    color: bisque;
+    font-weight: bold;
+}
+
+a:link{
+    color:pink;
+}
+
+a:visited{
+    color:green;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+#button{
+    background-color: aqua;
+}
