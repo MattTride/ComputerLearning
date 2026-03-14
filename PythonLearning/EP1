@@ -1,0 +1,21 @@
+from  bs4 import BeautifulSoup
+import requests
+
+
+
+url = 'https://news.cctv.com/'
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+}
+response = requests.get(url, headers=headers)
+response.encoding = 'utf-8'
+soup = BeautifulSoup(response.text, 'html.parser')
+titles = soup.find_all('a')
+links = soup.find_all('href')
+print(response.status_code)
+for title in titles:
+    text = title.get_text().strip()
+    link = title.get('href')
+    if text and link:
+        print(f"标题：{text}, 链接：{link}")
+
