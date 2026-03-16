@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #toggleBtn{
+            padding: 10px 20px;
+            background-color: aqua;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleBtn">点击切换</button>
+
+    <script>
+        const toggleBtn = document.getElementById("toggleBtn");
+
+        let isToggled = false;
+
+        toggleBtn.onclick = function(){
+            if(!isToggled){
+                this.textContent = "已切换";
+                this.style.backgroundColor = "#ea4355";
+            }else{
+                this.textContent = "点击切换";
+                this.style.backgroundColor = "#4285f4";
+            }
+            isToggled = !isToggled;
+        }
+    </script>
+
+
+
+</body>
+</html>
