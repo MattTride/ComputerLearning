@@ -1,0 +1,131 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft Yahei", Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 注册容器样式 */
+.register-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.register-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* 表单组样式 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* 输入框样式 */
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group input[type="email"],
+.form-group input[type="month"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #409eff;
+    box-shadow: 0 0 5px rgba(64, 158, 255, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical; /* 仅允许垂直调整大小 */
+}
+
+/* 单选框和复选框组样式 */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 8px 0;
+}
+
+.radio-group input,
+.checkbox-group input {
+    margin-right:5px;
+}
+
+/* 提交按钮组样式 */
+.submit-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.submit-group button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-group button[type="submit"] {
+    background-color: #409eff;
+    color: #fff;
+}
+
+.submit-group button[type="submit"]:hover {
+    background-color: #337ecc;
+}
+
+.submit-group button[type="reset"] {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+.submit-group button[type="reset"]:hover {
+    background-color: #d9d9d9;
+}
+
+/* 响应式适配 */
+@media (max-width: 480px) {
+    .register-container {
+        padding: 20px;
+    }
+
+    .submit-group {
+        flex-direction: column;
+    }
+}
