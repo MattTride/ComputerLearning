@@ -1,0 +1,41 @@
+/* 这是 CSS 里的注释方式，给 body（整个网页的身体）下达指令 */
+body {
+    background-color: #f4f4f9; /* 把背景变成护眼的浅灰色 */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* 换掉丑陋的默认字体 */
+    color: #333333; /* 让网页文字变成深灰色，不那么刺眼 */
+    text-align: center; /* 魔法指令：让网页里的所有内容居中对齐！ */
+}
+
+/* 专门给 h1 大标题下达指令 */
+h1 {
+    color: #0056b3; /* 把大标题变成深蓝色 */
+}
+
+/* 专门给你的表单输入框下达指令 */
+input {
+    padding: 8px; /* 让输入框内部胖一点，不要那么挤 */
+    margin: 5px; /* 让输入框外面和其他东西隔开一点距离 */
+    border-radius: 4px; /* 让输入框变成好看的圆角 */
+    border: 1px solid #ccc; /* 给输入框加一个淡淡的灰色边框 */
+}
+/* 瞄准代号为 login-card 的盒子 */
+.login-card {
+    background-color: #ffffff; /* 给盒子刷上纯白色的底漆 */
+    width: 320px; /* 限制盒子的宽度，不要让它铺满整个屏幕 */
+    margin: 40px auto; /* 关键魔法：上下外边距40像素，左右 auto（自动平分），这会让盒子在屏幕中间绝对居中！ */
+    padding: 30px; /* 让盒子里的内容离边缘有30像素的内边距，才不会显得拥挤 */
+    border-radius: 12px; /* 把盒子的直角磨成圆润的12像素圆角 */
+    
+    /* 终极光影魔法：水平偏移0，垂直偏移8px，模糊半径16px，颜色是带点透明度的纯黑 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+}
+
+/* 顺手把按钮也变漂亮一点 */
+button {
+    background-color: #0056b3; /* 按钮变成主题蓝 */
+    color: white; /* 按钮上的字变成白色 */
+    border: none; /* 去掉按钮丑陋的默认黑边框 */
+    padding: 10px 20px; /* 让按钮胖一点 */
+    border-radius: 6px; /* 按钮也加上小圆角 */
+    cursor: pointer; /* 鼠标放上去时，箭头会变成小手！ */
+}

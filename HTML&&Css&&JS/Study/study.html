@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My first page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>欢迎来到我的网站</h1>
+    <p>这是我的第一段html代码</p>
+    <p>虽然现在很简陋，不过这是全栈开发的第一步</p>
+    <p><a href="https://google.com"><strong>点击这里！</strong></a></p>
+    <img src="../imgs/google.webp" alt=" photo shows Google logo.">
+
+    <h3>我经常用的开发工具：</h3>
+    <ul>
+        <li>Vs Code</li>
+        <li>MacOs</li>
+        <li>Chrome</li>
+    </ul>
+
+    <h3>我的学习计划：</h3>
+    <ol>
+        <li>搞定html</li>
+        <li>学习python</li>
+        <li>学习PHP</li>
+    </ol>
+<div class="login-card">
+    <h3>系统登录</h3>
+    <form action="login.php" method="post" onsubmit="return checkForm()">
+        请输入用户名:
+        <input type="text" name="username">
+        <br>
+        请输入密码:
+        <input type="password" name="password">
+        <br>
+        <button type="submit" onclick="showAlert()">登录</button>
+        </form>
+</div>
+
+
+
+
+
+
+
+
+<script>
+    function showAlert(){
+        alert('欢迎');
+    }
+
+    function checkForm(){
+    }
+
+    let tools = ["vscode", "macos"];
+    console.log(tools[1])
+
+
+</script>
+
+</body>
+</html>
