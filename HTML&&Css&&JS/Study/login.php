@@ -14,20 +14,23 @@
     $raw_user = $_POST['username'];
     $raw_pass = $_POST['password'];
 
-    $clean_user = htmlspecialchars(trim($raw_user));
-    $clean_pass = trim($raw_pass);
+    $sql = "select * from users where username = ? and password = ?";
+    $stmt = mysqli_prepare($conn, $sql);
 
-    if(strlen($clean_pass) < 6){
-        die("<h2>密码长度不足！</h2>");
-    }
+    if($stmt){
+        mysqli_stmt_bind_param($stmt, "ss", $raw_user, $raw_pass);
+        mysqli_stmt_execute($stmt);
 
+        $result = mysqli_stmt_get_result($stmt);
 
-    $sql = "select * from users where username = '$clean_user' and password = '$clean_pass'";
-    $result = mysqli_query($conn, $sql);
-    if(mysqli_num_rows($result) > 0){
-        echo "<h2>登入成功，欢迎进入系统</h2>";
-    } else{
-        echo "<h2>账号密码错误</h2>";
+        if(mysqli_num_rows($result) > 0){
+            echo "<h2>登入成功，预处理生效中</h2>>";
+        }else {
+            echo "<h2>账号密码错误</h2>>";
+        }
+        mysqli_stmt_close($stmt);
+    }else{
+        echo "预处理失败";
     }
     mysqli_close($conn);
 ?>
