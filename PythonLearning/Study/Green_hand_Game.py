@@ -16,6 +16,7 @@ while player["hp"] > 0 and enemy["hp"] > 0:
     player_hit = random.randint(10, 25)
     enemy["hp"] = enemy["hp"] - player_hit
     if enemy["hp"] <= 0:
+        print(f"{player["name"]}打败了{enemy["name"]}!")
         break
     else:
         enemy_hit = random.randint(5, 15)
