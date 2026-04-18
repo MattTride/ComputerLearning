@@ -1,3 +1,8 @@
+import random
+
+hit_damage = random.randint(10, 25)
+
+
 hero_stat = ["Arthur", 5, 100]
 hero_stat[1] = 6
 hero_stat.append("红药水")
@@ -13,9 +18,9 @@ def attack(target):
     print(f"对{target}造成15点伤害")
 attack(enemies[0])
 
-def calculate_hp(current_hp, damage):
-    goblin_hp = current_hp - damage
+def calculate_hp(current_hp, hit_damage):
+    goblin_hp = current_hp - hit_damage
     return goblin_hp
 
-hp = calculate_hp(50, 15)
-print(f"{enemies[0]}剩余血量：{hp}")
+hp = calculate_hp(50, hit_damage)
+print(f"{enemies[0]}剩余血量：{hp}, {hero_stat[0]}对其造成了{hit_damage}点伤害")
