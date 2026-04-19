@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 import random
 
 
@@ -15,6 +16,8 @@ class Role:
     def attack(self, target):
         damage = random.randint(10, 25)
         target.hp = target.hp - damage
+        if target.hp <= 0:
+            target.hp = 0
         return f"⚔️ {self.name} 造成了 {damage} 点伤害！\n{target.name} 剩余血量: {target.hp}"
 
     def heal(self):
@@ -39,10 +42,11 @@ goblin = Role("哥布林", 50, 0)
 # =================  视觉窗口区 =================
 window = tk.Tk()
 window.title("Arthur的冒险")
-window.geometry("600x400")
+window.geometry("600x550")
 
 def on_attack_click():
     if goblin.hp <= 0:
+        goblin.hp = 0
         status_label.config(text="哥布林被打败了！")
         return
 
@@ -57,6 +61,7 @@ def on_attack_click():
 
 def on_heal_click():
     if goblin.hp <= 0:
+        goblin.hp = 0
         status_label.config(text="哥布林已经死透了，不需要回血了")
         return
     heal_report = hero.heal()
